@@ -1,0 +1,66 @@
+The first command line that would be a keeper is used to start an iperf
+server listener process for client connection. This is shown with the
+command below:
+
+iperf.exe -s -P 2 -i 5 -p 5999 -f k
+
+This will start an iperf listener on port 5999 (the default is port
+5001, however), limit the iperf process to providing two connections,
+and finally report on the connections every 5 seconds. The two
+connections (-P value) is important, because after the second connection
+the server process will exit. Placing in a value of zero (0) will allow
+the iperf process to listen continually and without limit to the number
+of connections until closed.
+
+
+Start an iperf client connection
+
+The other half of iperf is the client that will make the connection to a
+listener. To launch a client connection to a server named
+s-network1.amcs.tld using port 5999 (the non-default used in the
+previous example) for 60 seconds with a 5-second display interval, enter
+the following command:
+
+iperf.exe -c s-network1.amcs.tld -P 1 -i 5 -p 5999 -f B -t 60 -T 1
+
+When this command is run, the s-network1 host is tested for network
+performance. Unlike the Jperf GUI with the pretty graphs, iperf will
+simply report the bandwidth in the unit of measure specified, in this
+case it is bytes (-f value)
+
+To diagnose the network throughput issues, I busted out my copy of
+pcattcp and started doing some baseline network speed measurements. It's
+a great utility, and quite simple to use; just run one instance on a
+remote machine using the -R flag, then run another instance on the
+client with -t (remotename) and you're off to the races.
+
+But even before that, I started with a loopback test:
+
+C:\Program Files\ttcp>pcattcp -t -f M localhost
+
+PCAUSA Test TCP Utility V2.01.01.08 TCP Transmit Test Transmit    : TCP
+-> 127.0.0.1:5001 Buffer Size : 8192; Alignment: 16384/0 TCP_NODELAY :
+DISABLED (0) Connect     : Connected to 127.0.0.1:5001 Send Mode   :
+Send Pattern; Number of Buffers: 2048 Statistics  : TCP ->
+127.0.0.1:5001 16777216 bytes in 0.17 real seconds = 93.02 MB/sec +++
+numCalls: 2048; msec/call: 0.09; calls/sec: 11906.98
+
+This is helpful because it establishes an absolute upper bound on
+network performance. Even with an infinitely fast network, I won't
+achieve more than 93 megabytes per second throughput-- at least not on
+my PC. And this is a completely in-memory test; real world network
+operations may depend on hard disk reads and writes, which will be far
+slower.
+
+A good rule of thumb for real-world throughput is:
+
+* 10baseT = 1 megabyte/sec 
+* 100baseT = 10 megabytes/sec 
+* 1000baseT = 30 megabytes/sec
+
+All my ttcp testing over the last couple years has confirmed these
+numbers, plus or minus ten percent. I don't have as much experience with
+gigabit throughput, since I just got my first gigabit router, but you
+definitely shouldn't expect the perfect scaling we achieved moving from
+10baseT to 100baseT. Without any major tweaking, you'll get only a
+fraction of the tenfold bandwidth improvement you might expect.

@@ -1,0 +1,20 @@
+Password: { send \"$PASSWD\r\"; exp_continue }
+> { send \"new stream vod enabled\r\"; exp_continue }
+> { send \"setup stream input $DIR$1\r\" }    
+}
+
+ 
+expect -c "
+spawn ssh-keygen -t rsa -q
+expect {
+id_rsa):  { send \"\r"; expect}
+}
+expect {
+passphrase): { send \"\r"; ; exp_continue }
+}
+expect {
+again: { send \"\r"; ; exp_continue }
+}
+exit
+"
+echo "RSA Key Created";exit 
