@@ -1,0 +1,256 @@
+Class-A  	Domains Hosted  	Description
+1	24,631   	IANA - Reserved
+2	0   	IANA - Reserved
+3	0   	General Electric Company
+4	16,763   	Level3/Genuity-BBN (IANA INFO: Bolt Beranek and Newman Inc.)
+5	0   	IANA - Reserved
+6	0   	Army Information Systems Center
+7	0   	IANA - Reserved
+8	26,057   	Level3/Genuity-BBN (IANA INFO: Bolt Beranek and Newman Inc.)
+9	0   	IBM
+10	1,978   	IANA - Private Use. See RFC 1918
+11	79   	DoD Intel Information Systems
+12	214,231   	AT&T Bell Laboratories
+13	177   	Xerox Corporation
+14	0   	IANA - Public Data Network
+15	147   	Hewlett-Packard Company
+16	0   	Digital Equipment Corporation
+17	180   	Apple Computer Inc.
+18	498   	MIT
+19	0   	Ford Motor Company
+20	69   	Computer Sciences Corporation
+21	0   	DDN-RVN
+22	0   	Defense Information Systems Agency
+23	0   	IANA - Reserved
+24	144,335   	ARIN - Cable Block (Formerly IANA - Jul 95)
+25	0   	Royal Signals and Radar Establishment
+26	0   	Defense Information Systems Agency
+27	0   	IANA - Reserved
+28	0   	DSI-North
+29	0   	Defense Information Systems Agency
+30	0   	Defense Information Systems Agency
+31	0   	IANA - Reserved
+32	280   	AT&T (IANA INFO: Norsk Informasjonsteknologi)
+33	0   	DLA Systems Automation Center
+34	0   	Halliburton Company
+35	374   	MERIT Computer Network
+36	0   	IANA - Reserved (Formerly Stanford University - Apr 93 to
+37	0   	IANA - Reserved
+38	184,649   	COGENT/PSI (IANA INFO: Performance Systems International)
+39	0   	IANA - Reserved
+40	285   	Eli Lily and Company
+41	0   	AFRINIC
+42	0   	IANA - Reserved
+43	1,549   	V6NIC
+44	0   	Amateur Radio Digital Communications
+45	0   	Interop Show Network
+46	0   	Level3/Genuity-BBN (IANA INFO: Bolt Beranek and Newman Inc.)
+47	53   	Nortel (IANA INFO: Bell-Northern Research)
+48	0   	Prudential Securities Inc.
+49	0   	IANA (Formerly DoD - Joint Technical Command. Used: May 94
+50	0   	IANA (Formerly DoD - Joint Technical Command. Used: May 94
+51	0   	Deparment of Social Security of UK (EU territory should be
+52	93   	E.I. duPont de Nemours and Co., Inc.
+53	69   	Cap Debis CCS (EU territory should be in RIPE database)
+54	0   	Merck and Co., Inc.
+55	0   	Naval Ocean Systems Center (IANA INFO: Boeing Computer Services)
+56	0   	U.S. Postal Service
+57	542   	SITA (Equant.Net routable. EU territory should be in RIPE database)
+58	14,259   	APNIC
+59	41,684   	APNIC
+60	24,364   	APNIC
+61	439,278   	APNIC
+62	860,328   	RIPE
+63	842,130   	ARIN
+64	10,248,765   	ARIN
+65	1,374,615   	ARIN
+66	6,030,266   	ARIN
+67	988,896   	ARIN
+68	1,134,834   	ARIN
+69	2,269,583   	ARIN
+70	620,392   	ARIN
+71	37,917   	ARIN
+72	764,684   	ARIN
+73	0   	ARIN
+74	0   	ARIN
+75	0   	ARIN
+76	0   	ARIN
+77	0   	IANA - Reserved
+78	0   	IANA - Reserved
+79	0   	IANA - Reserved
+80	1,006,610   	RIPE
+81	548,040   	RIPE
+82	1,253,887   	RIPE
+83	370,109   	RIPE
+84	248,976   	RIPE
+85	130,775   	RIPE
+86	19,068   	RIPE
+87	15,909   	RIPE
+88	693   	RIPE
+89	0   	RIPE
+90	0   	RIPE
+91	0   	RIPE
+92	0   	IANA - Reserved
+93	0   	IANA - Reserved
+94	0   	IANA - Reserved
+95	0   	IANA - Reserved
+96	0   	IANA - Reserved
+97	0   	IANA - Reserved
+98	0   	IANA - Reserved
+99	156   	IANA - Reserved
+100	0   	IANA - Reserved
+101	0   	IANA - Reserved
+102	0   	IANA - Reserved
+103	0   	IANA - Reserved
+104	0   	IANA - Reserved
+105	0   	IANA - Reserved
+106	0   	IANA - Reserved
+107	0   	IANA - Reserved
+108	0   	IANA - Reserved
+109	0   	IANA - Reserved
+110	0   	IANA - Reserved
+111	53   	IANA - Reserved
+112	0   	IANA - Reserved
+113	0   	IANA - Reserved
+114	0   	IANA - Reserved
+115	0   	IANA - Reserved
+116	0   	IANA - Reserved
+117	0   	IANA - Reserved
+118	0   	IANA - Reserved
+119	0   	IANA - Reserved
+120	0   	IANA - Reserved
+121	0   	IANA - Reserved
+122	60   	IANA - Reserved
+123	63   	IANA - Reserved
+124	0   	APNIC
+125	761   	APNIC
+126	0   	APNIC
+127	10,095   	IANA - Reserved Loopback. See RFC 3330
+128	81,753   	Various Registries - Early Internic Registrations
+129	19,801   	Various Registries - Early Internic Registrations
+130	32,459   	Various Registries - Early Internic Registrations
+131	5,982   	Various Registries - Early Internic Registrations
+132	1,852   	Various Registries - Early Internic Registrations
+133	690   	JPNIC
+134	5,889   	Various Registries - Early Internic Registrations
+135	786   	Various Registries - Early Internic Registrations
+136	7,109   	Various Registries - Early Internic Registrations
+137	3,599   	Various Registries - Early Internic Registrations
+138	2,003   	Various Registries - Early Internic Registrations
+139	26,376   	Various Registries - Early Internic Registrations
+140	24,882   	Various Registries - Early Internic Registrations
+141	9,900   	Various Registries - Early Internic Registrations
+142	12,182   	Various Registries - Early Internic Registrations
+143	3,789   	Various Registries - Early Internic Registrations
+144	5,085   	Various Registries - Early Internic Registrations
+145	7,124   	RIPE
+146	14,873   	Various Registries - Early Internic Registrations
+147	42,144   	Various Registries - Early Internic Registrations
+148	11,745   	Various Registries - Early Internic Registrations
+149	7,621   	Various Registries - Early Internic Registrations
+150	4,918   	Various Registries - Early Internic Registrations
+151	27,908   	Various Registries - Early Internic Registrations
+152	5,050   	Various Registries - Early Internic Registrations
+153	1,132   	Various Registries - Early Internic Registrations
+154	2,535   	Various Registries - Early Internic Registrations
+155	9,310   	Various Registries - Early Internic Registrations
+156	2,647   	Various Registries - Early Internic Registrations
+157	7,968   	Various Registries - Early Internic Registrations
+158	2,343   	Various Registries - Early Internic Registrations
+159	25,066   	Various Registries - Early Internic Registrations
+160	6,109   	Various Registries - Early Internic Registrations
+161	139,209   	Various Registries - Early Internic Registrations
+162	15,446   	Various Registries - Early Internic Registrations
+163	2,687   	Various Registries - Early Internic Registrations
+164	27,763   	Various Registries - Early Internic Registrations
+165	10,365   	Various Registries - Early Internic Registrations
+166	13,199   	Various Registries - Early Internic Registrations
+167	18,613   	Various Registries - Early Internic Registrations
+168	88,412   	Various Registries - Early Internic Registrations
+169	2,602   	Various Registries - Early Internic Registrations
+170	8,460   	Various Registries - Early Internic Registrations
+171	1,559   	Various Registries - Early Internic Registrations
+172	617   	Various Registries - Early Internic Registrations
+173	0   	IANA - Reserved
+174	0   	IANA - Reserved
+175	0   	IANA - Reserved
+176	0   	IANA - Reserved
+177	0   	IANA - Reserved
+178	0   	IANA - Reserved
+179	0   	IANA - Reserved
+180	0   	IANA - Reserved
+181	0   	IANA - Reserved
+182	0   	IANA - Reserved
+183	0   	IANA - Reserved
+184	0   	IANA - Reserved
+185	0   	IANA - Reserved
+186	0   	IANA - Reserved
+187	0   	IANA - Reserved
+188	0   	RIPE
+189	0   	LACNIC
+190	0   	LACNIC
+191	0   	Reserved - ARIN whois shows only one allocation of 191.255.0.0/16
+192	281,709   	Various Registries MultiRegional - Early Registrations
+193	320,267   	RIPE
+194	407,628   	RIPE
+195	976,105   	RIPE
+196	33,658   	AFRINIC
+197	0   	IANA - Reserved
+198	293,866   	Various Registries - Early Internic Registrations
+199	138,804   	ARIN - North America
+200	164,054   	LACNIC
+201	9,633   	LACNIC
+202	493,399   	APNIC
+203	354,586   	APNIC
+204	1,819,542   	ARIN - North America
+205	502,428   	ARIN - North America
+206	615,148   	ARIN - North America
+207	1,095,785   	ARIN - North America
+208	991,844   	ARIN - North America
+209	1,585,508   	ARIN - North America
+210	496,073   	APNIC
+211	360,059   	APNIC
+212	1,962,779   	RIPE
+213	1,223,617   	RIPE
+214	0   	US Department of Defense
+215	0   	US Department of Defense
+216	6,586,977   	ARIN - North America
+217	1,178,999   	RIPE
+218	484,218   	APNIC
+219	139,164   	APNIC
+220	100,163   	APNIC
+221	81,363   	APNIC
+222	143,613   	APNIC
+223	0   	IANA - Reserved
+224	0   	IANA - Multicast. See RFC 3171
+225	0   	IANA - Multicast. See RFC 3171
+226	0   	IANA - Multicast. See RFC 3171
+227	0   	IANA - Multicast. See RFC 3171
+228	0   	IANA - Multicast. See RFC 3171
+229	0   	IANA - Multicast. See RFC 3171
+230	0   	IANA - Multicast. See RFC 3171
+231	0   	IANA - Multicast. See RFC 3171
+232	0   	IANA - Multicast. See RFC 3171
+233	0   	IANA - Multicast. See RFC 3171
+234	0   	IANA - Multicast. See RFC 3171
+235	0   	IANA - Multicast. See RFC 3171
+236	0   	IANA - Multicast. See RFC 3171
+237	0   	IANA - Multicast. See RFC 3171
+238	0   	IANA - Multicast. See RFC 3171
+239	0   	IANA - Multicast. See RFC 3171
+240	0   	IANA - Reserved
+241	0   	IANA - Reserved
+242	0   	IANA - Reserved
+243	0   	IANA - Reserved
+244	0   	IANA - Reserved
+245	0   	IANA - Reserved
+246	0   	IANA - Reserved
+247	0   	IANA - Reserved
+248	0   	IANA - Reserved
+249	0   	IANA - Reserved
+250	0   	IANA - Reserved
+251	0   	IANA - Reserved
+252	0   	IANA - Reserved
+253	0   	IANA - Reserved
+254	0   	IANA - Reserved
+255	6,015   	IANA - Reserved
