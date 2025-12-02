@@ -1,0 +1,211 @@
+Notes:
+
+All variations of ttcp report payload or user data rates, i.e. no
+overhead bytes from headers (TCP, UDP, IP, etc.) are included in the
+reported data rates. When comparing to "line" rates or "peak" rates, it
+is important to consider all of this overhead. It is also important to
+understand what the tools mean by "K" or "M" bits or bytes per second.
+Versions of the tools differ on this point.
+
+Computer memory is measured in powers of two, e.g. 1 KB = 2^10 = 1024
+bytes; 1 MB = 2^20 = 1024*1024 = 1048576 bytes. Data communication rates
+however should always be stated in simple bits per second. For example
+"100 megabit ethernet" can send exactly 100,000,000 bits per second.
+
+K and M in ttcp/nttcp/iperf 
+o ttcp original: K = 1024 (M is not used) 
+o nttcp: K = 1024, M = 1000*1024 
+o nuttcp: K=1000, M=1000000
+
+Thus for some early tools, the reported K bits per second should be
+multipled by 1.024 to get the actual kilobits per second payload data
+rate. Reported M bits per second should be multipled by 1.024 for nttcp
+and 1.048576.
+
+
+
+Versions:
+
+
+
+
+TTCP-OEM (ttcp original)
+
+ttcp was one of the first TCP throughput testing tools ever written. It
+was created by Mike Muuss at BRL to compare the performance of TCP
+stacks by U.C. Berkeley and BBN to help DARPA decide which version to
+place in the first BSD Unix release (Berkeley won). The name stands for
+"Test TCP", but it also supports UDP testing. Many variations have since
+been created with different defaults, new options, ports to new systems,
+etc.
+
+Start The Sender:
+
+Start The Reciever Session:
+
+
+
+
+nttcp:
+
+    * changed default nbuf (-n) from 1024 to 2048
+    * changed default buflen (-l) from 1024 to 65536
+    * changed default port (-p) from 2000 to 5001
+    * added window size (-w) option
+    * added TCP nodelay (-D) option
+    * reversed the meaning of (-s) source/sink option! 
+
+
+Start The Sender:
+
+./nttcp -t -n50 -w1500 -D 127.0.0.1
+
+Start The Reciever Session:
+
+./nttcp -r -w1500 -D -s 
+
+
+nuttcp:
+
+One of the best! Highly recommended. The author calls it n-u-t-t-c-p, but many 
+of us affectionately call it nut-c-p. nuttcp can run as a server and passes 
+all output back to the client side, so you don't need an account on the 
+server side to see the results. 
+
+Usage: nuttcp or nuttcp -h      prints this usage info
+Usage: nuttcp -V                prints version info
+Usage: nuttcp -xt [-m] host     forward and reverse traceroute to/from server
+Usage (transmitter): nuttcp -t [-options] host [3rd-party] [ out]
+        -4      Use IPv4
+        -6      Use IPv6
+        -l##    length of network read buf (default 8192/udp, 65536/tcp)
+        -s      don't sink (discard): prints all data from network to stdout
+        -n##    number of bufs for server to write to network (default 2048)
+        -w##    receiver window size in KB (or (m|M)B or (g|G)B)
+        -ws##   server transmit window size in KB (or (m|M)B or (g|G)B)
+        -wb     braindead Solaris 2.8 (sets both xmit and rcv windows)
+        -p##    port number to listen at (default 5001)
+        -P##    port number for control connection (default 5000)
+        -B      Only output full blocks, as specified in -l## (for TAR)
+        -u      use UDP instead of TCP
+        -m##    use multicast with specified TTL instead of unicast (UDP)
+        -N##    number of streams (starting at port number), implies -B
+        -R##    server transmit rate limit in Kbps (or (m|M)bps or (g|G)bps)
+        -T##    server transmit timeout in seconds (or (m|M)inutes or (h|H)ours)
+        -i##    client interval reporting in seconds (or (m|M)inutes)
+        -Ixxx   identifier for nuttcp output (max of 40 characters)
+        -F      flip option to reverse direction of data connection open
+        -xP##   set nuttcp process priority (must be root)
+        -d      set TCP SO_DEBUG option on data socket
+        -v[v]   verbose [or very verbose] output
+        -b      brief output (default)
+Usage (server): nuttcp -S [-options]
+                note server mode excludes use of -s
+        -4      Use IPv4 (default)
+        -6      Use IPv6
+        -1      oneshot server mode (implied with inetd/xinetd), implies -S
+        -P##    port number for server connection (default 5000)
+                note don't use with inetd/xinetd (use services file instead)
+        -xP##   set nuttcp process priority (must be root)
+        --no3rdparty don't allow 3rd party capability
+        --nofork     don't fork server
+Format options:
+        -fxmitstats     also give transmitter stats (MB) with -i (UDP only)
+        -frunningtotal  also give cumulative stats on interval reports
+        -f-drops        don't give packet drop info on brief output (UDP)
+        -f-percentloss  don't give %loss info on brief output (UDP)
+        -fparse         generate key=value parsable output
+
+
+
+
+Start The Sender:
+
+nuttcp -t -i20 -n2000 -R2M -w1M -ws1M -B -N5 -P10001 -p10002 127.0.0.1
+
+Start The Reciever Session:
+
+./nuttcp -S -P10001 -p 10002
+
+
+
+
+Options:
+
+-t
+
+Transmit mode.
+
+-r
+
+Receive mode.
+
+-u
+
+Use UDP instead of TCP.
+
+-s
+
+If transmitting, source a data pattern to network; if receiving, sink (discard) 
+the data. Without the -s option, the default is to transmit data from stdin or 
+print the received data to stdout.
+
+-l length
+
+Length of buffers in bytes (default 8192). For UDP, this value is the number of
+data bytes in each packet. The system limits the maximum UDP packet length. 
+This limit can be changed with the -b option.
+
+-b size
+
+Set size of socket buffer. The default varies from system to system. This 
+parameter affects the maximum UDP packet length. It may not be possible to 
+set this parameter on some systems (for example, 4.2BSD).
+
+-n numbufs
+
+Number of source buffers transmitted (default 2048). 
+
+-p port
+
+Port number to send to or listen on (default 2000). On some systems, this port 
+may be allocated to another network daemon.
+
+-D
+
+If transmitting using TCP, do not buffer data when sending (sets the 
+TCP_NODELAY socket option). It may not be possible to set this parameter 
+on some systems (for example, 4.2BSD).
+
+-B
+
+When receiving data, output only full blocks, using the block size specified 
+by -l. This option is useful for programs, such as tar(1), that require 
+complete blocks.
+
+-A align
+
+Align the start of buffers to this modulus (default 16384).
+
+-O offset
+
+Align the start of buffers to this offset (default 0). For example, 
+''-A8192 -O1'' causes buffers to start at the second byte of an 8192-byte page.
+
+-f format
+
+Specify, using one of the following characters, the format of the throughput 
+rates as kilobits/sec ('k'), kilobytes/sec ('K'), megabits/sec ('m'), 
+megabytes/sec ('M'), gigabits/sec ('g'), or gigabytes/sec ('G'). 
+The default is 'K'.
+
+-T
+
+''Touch'' the data as they are read in order to measure cache effects.
+
+-v
+
+Verbose: print more statistics.
+
+-d
+
